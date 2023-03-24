@@ -1,3 +1,2 @@
-import { photosInfo } from './data.js'
+import './mini.js';
 
-console.log(photosInfo[24]);

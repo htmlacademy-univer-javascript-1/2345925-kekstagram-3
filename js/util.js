@@ -1,6 +1,6 @@
 function getRandomInteger (from, to) {
-  let low = Math.ceil(Math.min(from, to));
-  let high = Math.floor(Math.max(from, to));
+  const low = Math.ceil(Math.min(from, to));
+  const high = Math.floor(Math.max(from, to));
   return  Math.floor(Math.random()*(high - low + 1) + low);
 }
 
