@@ -4,7 +4,9 @@ const closeImgUploadButton = document.querySelector('.img-upload__cancel');
 
 function closeImgUpload() {
   imgUpload.classList.add('hidden');
+  document.body.classList.remove('modal-open');
   document.removeEventListener('keydown', escapeKeyHandler);
+  fileInput.addEventListener('change', openImgUpload);
 }
 
 function escapeKeyHandler(evt) {
@@ -15,6 +17,7 @@ function escapeKeyHandler(evt) {
 
 function openImgUpload(){
   imgUpload.classList.remove('hidden');
+  document.body.classList.add('modal-open');
   document.addEventListener('keydown', escapeKeyHandler);
 }
 
