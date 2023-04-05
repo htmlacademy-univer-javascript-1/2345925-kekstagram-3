@@ -1,3 +1,2 @@
 import './mini.js';
-import './bigPicture.js';
-
+import './form.js';
