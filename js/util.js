@@ -4,7 +4,7 @@ function getRandomInteger (from, to) {
   return  Math.floor(Math.random()*(high - low + 1) + low);
 }
 
-function checkLength(str = '', maxLength = 0) {
+function checkLength(str, maxLength) {
   return(str.length <= maxLength);
 }
 
