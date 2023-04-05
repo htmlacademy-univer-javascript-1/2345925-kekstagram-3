@@ -1,5 +1,4 @@
 import {closeImgUpload} from './bigPicture.js';
-
 const form = document.querySelector('.img-upload__form');
 //const templateSuccess = document.querySelector('#success').content;
 
@@ -15,12 +14,17 @@ const pristine = new Pristine(form, {
 function validComment(comment){
   return comment.length >= 20 && comment.length <=140;
 }
-
-
 pristine.addValidator(
   form.querySelector('.text__description'),
   validComment,
   'От 20 до 140 с имволов');
+form.addEventListener('submit', (evt) => {
+  evt.preventDefault();
+  if(pristine.validate()) {
+    closeImgUpload();
+  }
+});
+
 /*
 function openSuccessWindow(){
   const successNode = templateSuccess.cloneNode(true);
@@ -32,9 +36,3 @@ function openSuccessWindow(){
   });
 }
 */
-form.addEventListener('submit', (evt) => {
-  evt.preventDefault();
-  if(pristine.validate()) {
-    closeImgUpload();
-  }
-});
