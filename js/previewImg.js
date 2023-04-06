@@ -20,23 +20,28 @@ effectLevelSlider.addEventListener('input', (evt) => {
   const style = getComputedStyle(previewImage);
   if(style.filter.startsWith('sepia')){
     effectLevelSlider.max = 1;
-    effectLevelSlider.step = 0.05;
+    effectLevelSlider.step = 0.1;
+    effectLevelSlider.min = 0;
     previewImage.style.filter = `sepia(${effectLevelSlider.value})`;
   } else if(style.filter.startsWith('invert')){
     effectLevelSlider.max = 100;
-    effectLevelSlider.step = 5;
+    effectLevelSlider.step = 1;
+    effectLevelSlider.min = 0;
     previewImage.style.filter = `invert(${effectLevelSlider.value}%)`;
   } else if(style.filter.startsWith('blur')){
     effectLevelSlider.max = 3;
-    effectLevelSlider.step = 0.15;
+    effectLevelSlider.step = 0.1;
+    effectLevelSlider.min = 0;
     previewImage.style.filter = `blur(${effectLevelSlider.value}px)`;
   } else if(style.filter.startsWith('grayscale')){
     effectLevelSlider.max = 1;
-    effectLevelSlider.step = 0.05;
+    effectLevelSlider.step = 0.1;
+    effectLevelSlider.min = 0;
     previewImage.style.filter = `grayscale(${effectLevelSlider.value})`;
   } else if(style.filter.startsWith('brightness')){
     effectLevelSlider.max = 3;
-    effectLevelSlider.step = 0.15;
+    effectLevelSlider.step = 0.1;
+    effectLevelSlider.min = 1;
     previewImage.style.filter = `brightness(${effectLevelSlider.value})`;
   }
 });
