@@ -1,6 +1,6 @@
 import {showAlert} from './util.js';
-const getData = (onSuccess) => {
-  fetch('https://27.javascript.pages.academy/kekstagram-simple/data')
+const getData = (source, onSuccess) => {
+  fetch(`${source}/data`)
     .then((response) => {
       if (response.ok) {
         return response.json();

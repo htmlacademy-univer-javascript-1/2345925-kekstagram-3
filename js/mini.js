@@ -18,4 +18,4 @@ const addMiniPhotos = (photosInfo) => {
   pictures.append(newFragment);
 };
 
-getData(addMiniPhotos);
+getData('https://27.javascript.pages.academy/kekstagram-simple', addMiniPhotos);
